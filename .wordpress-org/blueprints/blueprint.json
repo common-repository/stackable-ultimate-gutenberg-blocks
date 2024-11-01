@@ -1,0 +1,21 @@
+{
+    "landingPage": "\/wp-admin\/post.php?post=5&action=edit",
+    "preferredVersions": {
+        "php": "8.2",
+        "wp": "6.4"
+    },
+    "phpExtensionBundles": [
+        "kitchen-sink"
+    ],
+    "steps": [
+        {
+            "step": "login",
+            "username": "admin",
+            "password": "password"
+        },
+        {
+            "step": "runPHP",
+            "code": "<?php\ninclude 'wordpress/wp-load.php';\nwp_insert_post(array(\n'import_id' => 5,\n'post_title' => 'Hey From Stackable 👋',\n'post_content' => '<!-- wp:stackable/text {\"uniqueId\":\"86365db\"} -->\n<div class=\"wp-block-stackable-text stk-block-text stk-block stk-86365db\" data-block-id=\"86365db\"><p class=\"stk-block-text__text\">So you wanna see what Stackable is all about? Well this whole page is created using Stackable blocks only! Click on any block and below so see how Stackable blocks can make your life better.</p></div>\n<!-- /wp:stackable/text -->\n\n<!-- wp:stackable/button-group {\"uniqueId\":\"a7d0baf\",\"blockMargin\":{\"bottom\":\"\"}} -->\n<div class=\"wp-block-stackable-button-group stk-block-button-group stk-block stk-a7d0baf\" data-block-id=\"a7d0baf\"><div class=\"stk-row stk-inner-blocks stk-block-content stk-button-group\"><!-- wp:stackable/button {\"uniqueId\":\"8f3cb19\"} -->\n<div class=\"wp-block-stackable-button stk-block-button stk-block stk-8f3cb19\" data-block-id=\"8f3cb19\"><a class=\"stk-link stk-button stk--hover-effect-darken\" href=\"\"><span class=\"stk-button__inner-text\">ewqdwq</span></a></div>\n<!-- /wp:stackable/button --></div></div>\n<!-- /wp:stackable/button-group -->',\n'post_status' => 'publish',\n'post_author' => 1\n));"
+        }
+    ]
+}
